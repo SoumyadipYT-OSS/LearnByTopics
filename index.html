@@ -569,6 +569,116 @@
                 transform: rotate(360deg);
             }
         }
+
+        /* --- ARCHITECTURAL RESPONSIVENESS (MOBILE/TAB) --- */
+        @media (max-width: 1024px) {
+            .hud {
+                padding: 3vh 5vw;
+            }
+
+            .timeline-v {
+                height: 25vh;
+                left: 5vw;
+            }
+
+            .module {
+                width: 90vw;
+                padding: 3rem;
+            }
+
+            .trinity-wrap {
+                flex-direction: column;
+                width: 90vw;
+                gap: 1.5rem;
+                height: 60vh;
+                overflow-y: auto;
+                padding: 10px;
+            }
+
+            .trinity-card {
+                flex: none;
+                width: 100%;
+                min-height: 120px;
+            }
+
+            .trinity-card.active-card {
+                flex: none;
+                min-height: 400px;
+            }
+
+            .detail-row {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .terminal-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .grid-3 {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(2.5rem, 8vw, 4rem);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hud-top .tag:first-child {
+                display: none;
+            }
+
+            .hud-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .timeline-v {
+                display: none;
+            }
+
+            .module {
+                padding: 2rem;
+                margin-top: 2rem;
+            }
+
+            .label {
+                font-size: 0.55rem;
+                letter-spacing: 0.6em;
+            }
+
+            h1 {
+                font-size: 2.8rem;
+            }
+
+            .sub {
+                font-size: 1rem;
+                margin-top: 2rem;
+            }
+
+            .node h4 {
+                font-size: 1.1rem;
+            }
+
+            .code-view,
+            .code-terminal {
+                padding: 1.5rem;
+                font-size: 0.8rem;
+            }
+
+            .social-link {
+                font-size: 0.55rem;
+            }
+
+            #optic {
+                width: 30px !important;
+                height: 30px !important;
+            }
+        }
     </style>
 </head>
 
